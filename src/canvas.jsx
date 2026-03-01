@@ -61,7 +61,7 @@ const Canvas = () => {
             ctx.fillText(`P1: ${gameState.scores.p1}`, 10, 20);
 
             ctx.textAlign = 'right';
-            ctx.fillText(`P: ${gameState.scores.p2}`, BOARD_SIZE - 10, 20);
+            ctx.fillText(`P2: ${gameState.scores.p2}`, BOARD_SIZE - 10, 20);
         };
 
         const render = () => {
