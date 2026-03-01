@@ -28,12 +28,12 @@ const Canvas = () => {
         let gameState;
 
         const drawBackground = () => {
-            ctx.fillStyle = '#FFCE1B';
+            ctx.fillStyle = '#111827';
             ctx.fillRect(0, 0, BOARD_SIZE, BOARD_SIZE);
         };
 
         const drawFood = () => {
-            ctx.fillStyle = '#FF00FF';
+            ctx.fillStyle = '#FACC15';
             ctx.beginPath();
             ctx.arc(
                 gameState.food.x + CELL / 2,
@@ -54,12 +54,23 @@ const Canvas = () => {
             });
         };
 
+        const drawScores = () => {
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 16px Verdana';
+            ctx.textAlign = 'left';
+            ctx.fillText(`P1: ${gameState.scores.p1}`, 10, 20);
+
+            ctx.textAlign = 'right';
+            ctx.fillText(`P: ${gameState.scores.p2}`, BOARD_SIZE - 10, 20);
+        };
+
         const render = () => {
             if (!gameState) return;
             drawBackground();
             drawFood();
-            drawSnake(gameState.snakes.p1, '#00674F');
-            drawSnake(gameState.snakes.p2, '#0033AA');
+            drawSnake(gameState.snakes.p1, '#10B981');
+            drawSnake(gameState.snakes.p2, '#F43F5E');
+            drawScores();
         };
 
         socket.onmessage = event => {
@@ -131,9 +142,14 @@ const Canvas = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     background: 'rgba(0,0,0,0.6)',
-                    color: 'white'
+                    color: 'white',
+                   
                 }}>
-                    <div>
+                    <div style={{
+                        marginBottom: '16px',
+                        font: 'bold 24px Verdana',
+                        color: '#FACC15',
+                    }}>
                         {uiState.status === 'finished'
                             ? `Winner: ${uiState.winner}`
                             : 'Game Over'}
