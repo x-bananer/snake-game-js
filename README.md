@@ -1,9 +1,13 @@
 # Multiplayer Snake Game
 
-<img src="./demo.png" width="600" />
 
 Realtime multiplayer Snake game built with React and Node.js.  
 Two players connect to the same session and compete in real time.
+
+
+<p align="center">
+  <img src="./demo.png" width="600" />
+</p>
 
 ## Link
 https://multiplayer-snake-game-js.vercel.app
