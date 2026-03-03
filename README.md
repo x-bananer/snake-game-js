@@ -41,10 +41,6 @@ All movement and scoring logic runs on the server to prevent desynchronization.
 
 ## Installation
 
-Clone the repository:
-
-git clone https://github.com/your-username/multiplayer-snake.git  
-
 ### Frontend
 
 npm install  
