@@ -1,6 +1,6 @@
 # Multiplayer Snake Game
 
-![Game Demo](./demo.png)
+<img src="./demo.png" width="600" />
 
 Realtime multiplayer Snake game built with React and Node.js.  
 Two players connect to the same session and compete in real time.
